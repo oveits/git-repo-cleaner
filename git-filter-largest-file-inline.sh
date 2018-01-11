@@ -17,9 +17,10 @@ OBJECT=$(cat largest_file | awk '{print $1}')
 LARGEFILE=$(git rev-list --objects --all | grep $OBJECT | awk '{print $2}')
 	echo LARGEFILE=$LARGEFILE
 
-git log --oneline --branches -- ${LARGEFILE} > largest_file_commits
+#git log --oneline --branches -- ${LARGEFILE} > largest_file_commits
 #FIRSTCOMMIT=$(cat largest_file_commits | tail -1 | awk '{print $1}')
 #	echo FIRSTCOMMIT=$FIRSTCOMMIT
+rm largest_file*
 
 # to be cautious I do not remove a small shell script file instead of the large git.tgz file, I ask, whether I have found the correct file:
 [ "${LARGEFILE}" == "git.tgz" ] && \
