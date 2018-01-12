@@ -33,6 +33,7 @@ du -h -d 1
 echo "$ git count-objects -v"
 git count-objects -v
 
+# found e.g. on https://itextpdf.com/blog/how-completely-remove-file-git-repository:
 echo '$ git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d'
 git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
 
