@@ -24,7 +24,7 @@ rm largest_file*
 
 # to be cautious I do not remove a small shell script file instead of the large git.tgz file, I ask, whether I have found the correct file:
 [ "${LARGEFILE}" == "git.tgz" ] && \
-git filter-branch --index-filter "git rm --ignore-unmatch --cached $LARGEFILE" -- --all
+git filter-branch --tag-name-filter 'cat' --index-filter "git rm --ignore-unmatch --cached $LARGEFILE" -- --all
 #java -jar ../bfg.jar --delete-files $LARGEFILE
 
 echo "$ du -h -d 1"
