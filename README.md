@@ -6,8 +6,10 @@ This repo is used to test some scripts how to delete a large file from GIT histo
 ## How to apply to your repo
 
 - download delete-largest-file.sh
+
   e.g. curl https://raw.githubusercontent.com/oveits/git-repo-cleaner/master/delete-largest-file.sh
 - goto local repo
+
   e.g. clone to local:
   ```bash
   git clone <your-repo>
