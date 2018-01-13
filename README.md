@@ -5,6 +5,11 @@ This repo is used to test some scripts how to delete a large file from GIT histo
 
 ## How to apply to your repo
 
+### Use at your own risk!!!
+### NOTE: this will rewrite the complete history of your repo! Please be sure to have created a valid backup!
+
+- backup your repo!!!
+- be sure to have backed up your repo!!!!!
 - download delete-largest-file.sh
 
   e.g. curl https://raw.githubusercontent.com/oveits/git-repo-cleaner/master/delete-largest-file.sh
