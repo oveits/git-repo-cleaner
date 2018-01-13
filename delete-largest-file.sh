@@ -11,16 +11,18 @@ getLargestFile() {
 filterFile() {
    
     if [ "$1" == "" ]; then
-       echo fitlerFile called with no file name
-       exit 1
+        echo fitlerFile called with no file name
+        exit 1
+    else
+        FILE="$1"
     fi
 
     if [ "$BFG" == "--bfg" ]; then
-       curl http://repo1.maven.org/maven2/com/madgag/bfg/1.12.16/bfg-1.12.16.jar -o bfg.jar
-       java -jar bfg.jar --delete-files $LARGEFILE
-       rm bfg.jar
+        curl http://repo1.maven.org/maven2/com/madgag/bfg/1.12.16/bfg-1.12.16.jar -o bfg.jar
+        java -jar bfg.jar --delete-files $FILE
+        rm bfg.jar
     else
-       git filter-branch --tag-name-filter 'cat' --index-filter "git rm --ignore-unmatch --cached $LARGEFILE" -- --all
+        git filter-branch --tag-name-filter 'cat' --index-filter "git rm --ignore-unmatch --cached $FILE" -- --all
     fi
 }
 
