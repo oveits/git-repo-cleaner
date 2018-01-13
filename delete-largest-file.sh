@@ -85,14 +85,13 @@ printSizeOfRepo || exit 1
 while true; do
     read -p "Do you wish to force push the cleaned repo to the remote repo? [y|n]" yn
     case $yn in
-        [Yy]* ) git push --force || exit 1; break;;
-        [Nn]* ) exit 0;;
+        [Yy]* ) git push --force && RESULT=$?; break;;
+        [Nn]* ) RESULT=0; exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done
 
-echo "Error: You should never reach here"
-exit 1
+exit $RESULT
 
 # git garbage collection (git gc) is also pack the files and is needed for the git verify-pack command to work fine: 
 echo "Perform git garbage collection, which also will pack all objects (needed for the next command):"
