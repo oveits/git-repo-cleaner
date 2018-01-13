@@ -1,7 +1,7 @@
 # git-repo-cleaner
 This repo is used to test some scripts how to delete a large file from GIT history
 - either by using git filter-list
-- or, much faster by using the tool (BFG)[https://rtyley.github.io/bfg-repo-cleaner/]
+- or, much faster by using the tool [BFG](https://rtyley.github.io/bfg-repo-cleaner/)
 
 ## How to apply to your repo
 
