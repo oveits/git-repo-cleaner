@@ -27,21 +27,21 @@ filterFile() {
 }
 
 printSizeOfRepo(){
-    [ "$VERBOSE" == "true"] && echo "git count-objects -v"
+    [ "$VERBOSE" == "true" ] && echo "git count-objects -v"
     git count-objects -v
-    [ "$VERBOSE" == "true"] && echo "du -h -d 1"
+    [ "$VERBOSE" == "true" ] && echo "du -h -d 1"
     du -h -d 1
 }
 
 updateReferences(){
-    [ "$VERBOSE" == "true"] && echo '$ git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d'
+    [ "$VERBOSE" == "true" ] && echo '$ git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d'
     git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
 }
 
 expireAndPrune(){
-    [ "$VERBOSE" == "true"] && echo "$ git reflog expire --expire=now --all"
+    [ "$VERBOSE" == "true" ] && echo "$ git reflog expire --expire=now --all"
     git reflog expire --expire=now --all
-    [ "$VERBOSE" == "true"] && echo "$ git gc --prune=now"
+    [ "$VERBOSE" == "true" ] && echo "$ git gc --prune=now"
     git gc --prune=now
 }
 
