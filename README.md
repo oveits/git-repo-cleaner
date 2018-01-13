@@ -2,15 +2,15 @@
 
 Add and push a large file by:
 ```bash
-bash git-add-large-file.sh
+bash add-large-file.sh
 ```
 
 Clean the repo from the largest file found in git history:
 ```bash
-bash git-filter-largest-file-inline.sh
+bash delete-largest-file-via-git-filter.sh
 ```
 
 or faster:
 ```bash
-bash git-filter-largest-file-inline-via-bfd.sh
+bash delete-largest-file-via-bfg.sh
 ```
