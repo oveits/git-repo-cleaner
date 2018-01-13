@@ -3,7 +3,7 @@ This repo is used to test some scripts how to delete a large file from GIT histo
 - either by using git filter-list
 - or, much faster by using the tool (BFG)[https://rtyley.github.io/bfg-repo-cleaner/]
 
-## How to apply to your directory
+## How to apply to your repo
 
 - download delete-largest-file.sh
   e.g. curl https://raw.githubusercontent.com/oveits/git-repo-cleaner/master/delete-largest-file.sh
@@ -19,7 +19,7 @@ This repo is used to test some scripts how to delete a large file from GIT histo
   ```
   The option --bfd will speed up the process of filtering; especially, if you have many commits in the repo
 
-## Test git-repo-cleaner repo
+## How to test git-repo-cleaner repo
 
 Before you apply the scripts to you repo, you might want to test the scripts on a copy of the current repo.
 
